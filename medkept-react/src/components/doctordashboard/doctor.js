@@ -17,6 +17,12 @@ function Userdashboard() {
         document.getElementById('selectfile').click();}
    let [state,setState] = useState({ selectedFile: null })
    const[reports,setReports]=useState([]);
+   const fileChangedHandler = (event) => {
+    setState({ selectedFile: event.target.files[0] })
+  }
+  const uploadHandler = () => {
+    console.log(state.selectedFile)
+  }
 // Put Your moralis api key
 // const API_KEY="b0ZTsBAkR2pmit7Swa0iBvvgHGyKRagDExqbganvnB7Ujir6syvWFBdqi8uTnVCO";
 
@@ -111,8 +117,8 @@ let count=0;
             <Top src='dashboard_top.png' />
             {/* <AddButton onClick={uploadfiles}><span>+</span></AddButton> */}
             <Certificate>Reports</Certificate>
-            {/* <input id='selectfile' style={{display:"none"}} type="file"  onChange={fileChangedHandler}/> */}
-            {/* <button onClick={uploadHandler}>Upload</button> */}
+            <input id='selectfile'  type="file"  onChange={fileChangedHandler}/>
+            <button onClick={uploadHandler}>Upload</button>
             {/* <BlankPresentation>
             <Blank src='blank.png'/>
             <div>Nothing Present</div>
