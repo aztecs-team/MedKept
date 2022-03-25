@@ -1,5 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import styled from 'styled-components';
+import fileToArrayBuffer from 'file-to-array-buffer';
+import { Buffer } from 'buffer';
 // import MenuIcon from '@mui/icons-material/Menu';
 // import IconButton from '@mui/material/IconButton';
 // import CloseIcon from '@mui/icons-material/Close';
@@ -22,6 +24,10 @@ function Userdashboard() {
   }
   const uploadHandler = () => {
     console.log(state.selectedFile)
+    fileToArrayBuffer(state.selectedFile).then(data => {
+        const buf = Buffer.from(data)
+        console.log(buf)
+    })
   }
 // Put Your moralis api key
 // const API_KEY="b0ZTsBAkR2pmit7Swa0iBvvgHGyKRagDExqbganvnB7Ujir6syvWFBdqi8uTnVCO";
