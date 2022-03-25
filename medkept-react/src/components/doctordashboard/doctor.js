@@ -8,11 +8,11 @@ import styled from 'styled-components';
 import axios from 'axios';
 // import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 // import LogoutIcon from '@mui/icons-material/Logout';
-import {useDispatch} from "react-redux"
-import {setCertificates,setNames} from "../../features/patient/patient"
-import {selectCertificates} from '../../features/patient/patient'
-import {selectNames} from '../../features/patient/patient'
-import {useSelector} from 'react-redux'
+// import {useDispatch} from "react-redux"
+// import {setCertificates,setNames} from "../../features/patient/patient"
+// import {selectCertificates} from '../../features/patient/patient'
+// import {selectNames} from '../../features/patient/patient'
+// import {useSelector} from 'react-redux'
 function Userdashboard() {
     let [status,setStatus] = useState(false)
     let [show,setShow] = useState(false)
