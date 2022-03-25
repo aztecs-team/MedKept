@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-// import Userdashboard from './components/userDashboard/userdashboard';
-// import logo from './logo.svg';
-// import { Counter } from './features/counter/Counter';
-// import DoctorDashboard from './components/doctordashboard/doctor'
-import Metamask from './metamask/metamask'
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      {/* <DoctorDashboard/> */}
-      <Metamask/>
-    </div>
-=======
 import React from "react";
 
 import "./App.css";
@@ -58,7 +42,6 @@ function App() {
 //     <div className="App">
 //       <DoctorDashboard/>
 //     </div>
->>>>>>> a088844d71e6797547484316e04f55411038c5a9
   );
 }
 
