@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { uploadReport } = require('./../logic/managerLogic');
+const { uploadReport } = require('./../logic/upload');
 
 router
 .route('/')
