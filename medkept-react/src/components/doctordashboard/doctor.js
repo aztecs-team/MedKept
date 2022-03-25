@@ -1,5 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import styled from 'styled-components';
+import fileToArrayBuffer from 'file-to-array-buffer';
+import { Buffer } from 'buffer';
 // import {Buffer} from 'buffer';
 // import fs from 'fs';
 // import MenuIcon from '@mui/icons-material/Menu';
@@ -21,9 +23,21 @@ function Userdashboard() {
         document.getElementById('selectfile').click();}
 //    let [state,setState] = useState({ selectedFile: null })
    const[reports,setReports]=useState([]);
-   const fileChangedHandler = (event) => {
-    setText(event.target.value)
-  }
+//    const fileChangedHandler = (event) => {
+//     setState({ selectedFile: event.target.files[0] })
+//   }
+//   const uploadHandler = () => {
+//     console.log(state.selectedFile)
+//     fileToArrayBuffer(state.selectedFile).then(data => {
+//         const buf = Buffer.from(data)
+//         console.log(buf)
+//     })
+//     setText(event.target.value)
+//   }
+
+     const fileChangedHandler = (event) => {
+            setText(event.target.value)
+          }
 
 //   const uploadHandler = () => {
 //     console.log(state.selectedFile.data.data)
@@ -141,6 +155,10 @@ let count=0;
                     
                     return(
                         <>
+                    <D src={e}/>
+                    <D src={e}/>
+                    <D src={e}/>
+                    <D src={e}/>
                     <D src={e}/>
                     </>
                     )}

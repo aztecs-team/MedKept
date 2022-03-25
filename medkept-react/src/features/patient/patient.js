@@ -22,3 +22,4 @@ export const {setCertificates,setNames} = certificateSlice.actions;
 export const selectCertificates = (state)=>state.certificate.certificates;
 export const selectNames = (state)=>state.certificate.names;
 export default certificateSlice.reducer;
+
