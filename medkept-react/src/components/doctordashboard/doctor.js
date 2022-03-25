@@ -68,7 +68,8 @@ async function Work() {
     let x="";
     await axios.post(`https://medkept.herokuapp.com/doctor/report`,{"patient":`${text}`,"doctor":"0x73e989cc5E69c2254327a1bC317255EF9ADc6985"}, {
         headers: {
-            'Authorization':'Bearer 62324ec714797e008a8409e6'
+            'Authorization':'Bearer 62324ec714797e008a8409e6',
+            'Allow-Control-Allow-Origin':'*',
         }
     }).then((res) => {
         console.log(res.data);

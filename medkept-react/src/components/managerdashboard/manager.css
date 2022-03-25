@@ -1,0 +1,55 @@
+.suc{
+    color:#fff;
+}
+.choose{
+    
+    outline: none;
+    width: 200px;
+    height: 20px;
+    margin-left: 200px;
+    margin-bottom: 100px;
+    font-size: 12px;
+    
+    font-weight: 600;
+    box-shadow: 3px 6px 40px #000;
+    /* background: linear-gradient(to right bottom,#E0ECE4,#FF4B5C); */
+    cursor: pointer;
+    letter-spacing: 1px;
+    
+    background-color: 1px solid #e6d5b8;
+}
+
+.upload ,.sub {
+outline: none;
+  width: 200px;
+  height:50px;
+  margin-left: 10px;
+  margin-bottom: 100px;
+  font-size: 12px;
+  
+  font-weight: 600;
+  box-shadow: 3px 6px 40px #000;
+  /* background: linear-gradient(to right bottom,#E0ECE4,#FF4B5C); */
+  cursor: pointer;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  background-color: 1px solid #e6d5b8;
+}
+
+.doc, .patient{
+    outline: none;
+    margin-top: 20px;
+    width: 500px;
+    height:50px;
+    margin-left: 200px;
+    margin-bottom: 100px;
+    font-size: 12px;
+    
+    font-weight: 600;
+    box-shadow: 3px 6px 40px #000;
+    /* background: linear-gradient(to right bottom,#E0ECE4,#FF4B5C); */
+    cursor: pointer;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    background-color: 1px solid #e6d5b8;
+}
