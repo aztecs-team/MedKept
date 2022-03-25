@@ -13,9 +13,9 @@ import {selectNames} from '../../features/patient/patient'
 import {useSelector} from 'react-redux'
 function Userdashboard() {
     let [status,setStatus] = useState(false)
-    let uploadfiles=()=>{
-        document.getElementById('selectfile').click();}
-   let [state,setState] = useState({ selectedFile: null })
+//     let uploadfiles=()=>{
+//         document.getElementById('selectfile').click();}
+//    let [state,setState] = useState({ selectedFile: null })
    const[reports,setReports]=useState([]);
 // Put Your moralis api key
 // const API_KEY="b0ZTsBAkR2pmit7Swa0iBvvgHGyKRagDExqbganvnB7Ujir6syvWFBdqi8uTnVCO";
