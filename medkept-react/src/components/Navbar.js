@@ -46,7 +46,7 @@ function Navbar() {
 
               <ul className="nav_item">
                 <Link
-                  to="/registration"
+                  to="/manager"
                   className="nav_links"
                   onClick={closeMobileMenu}
                 >
@@ -57,7 +57,7 @@ function Navbar() {
 
               <ul className="nav_item">
                 <Link
-                  to="/reports"
+                  to="/doctor"
                   className="nav_links"
                   onClick={closeMobileMenu}
                 >
@@ -68,7 +68,8 @@ function Navbar() {
 
               <ul className="nav_item">
                 <Link
-                  to="/prescription"
+                  to="/patient"
+                  ethid={"abcd"}
                   className="nav_links"
                   onClick={closeMobileMenu}
                 >

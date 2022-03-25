@@ -3,6 +3,7 @@ import '../../App.css';
 import Navbar from '../Navbar';
 import HeroSection from '../HeroSection';
 import Footer from '../Footer';
+// import { useMoralis } from 'react-moralis';
 
 function Home() {
   return (

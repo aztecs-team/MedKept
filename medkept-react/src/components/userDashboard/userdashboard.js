@@ -12,8 +12,12 @@ import { setCertificates, setNames } from "../../features/patient/patient";
 import { selectCertificates } from "../../features/patient/patient";
 import { selectNames } from "../../features/patient/patient";
 import { useSelector } from "react-redux";
-function Userdashboard() {
+function Userdashboard(props) {
+    console.log(props.id);
   let [status, setStatus] = useState(false);
+  let [ids, setId] = useState("");
+//   setId(props.id)
+//   console.log(ids);
   //     let uploadfiles=()=>{
   //         document.getElementById('selectfile').click();}
   //    let [state,setState] = useState({ selectedFile: null })
@@ -32,14 +36,15 @@ function Userdashboard() {
   // Put users account adress
   // const accountAdress = '0xCF7D9678D93Ce254cFBdD4ACD4008DfaB1437b28';
   // const accountAdress = '0x73e989cc5E69c2254327a1bC317255EF9ADc6985';
-  async function Work() {
+  async function Work(props) {
     let arr = [];
     let name = [];
     let x = "";
+    // "0xCf7D63056A1363F38B0DE630d70B0F2C9B2CE6ee"
     await axios
       .post(
         `https://medkept.herokuapp.com/patient`,
-        { patient: "0xCf7D63056A1363F38B0DE630d70B0F2C9B2CE6ee" },
+        { patient:"0xCf7D63056A1363F38B0DE630d70B0F2C9B2CE6ee" },
         {
           headers: {
             Authorization: "Bearer 62324ec714797e008a8409e6",
