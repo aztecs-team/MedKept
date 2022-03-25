@@ -1,5 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import styled from 'styled-components';
+// import {Buffer} from 'buffer';
+// import fs from 'fs';
 // import MenuIcon from '@mui/icons-material/Menu';
 // import IconButton from '@mui/material/IconButton';
 // import CloseIcon from '@mui/icons-material/Close';
@@ -13,16 +15,22 @@ import {selectNames} from '../../features/patient/patient'
 import {useSelector} from 'react-redux'
 function Userdashboard() {
     let [status,setStatus] = useState(false)
+    let [show,setShow] = useState(false)
+    let [text,setText] = useState("")
     let uploadfiles=()=>{
         document.getElementById('selectfile').click();}
-   let [state,setState] = useState({ selectedFile: null })
+//    let [state,setState] = useState({ selectedFile: null })
    const[reports,setReports]=useState([]);
    const fileChangedHandler = (event) => {
-    setState({ selectedFile: event.target.files[0] })
+    setText(event.target.value)
   }
-  const uploadHandler = () => {
-    console.log(state.selectedFile)
-  }
+
+//   const uploadHandler = () => {
+//     console.log(state.selectedFile.data.data)
+    // const fileContents = Buffer.from(state.selectedFile, 'base64')
+    // fs.readFile(state.selectedFile, function(err, buffer){console.log(buffer)})
+    // console.log(fileContents)
+//   }
 // Put Your moralis api key
 // const API_KEY="b0ZTsBAkR2pmit7Swa0iBvvgHGyKRagDExqbganvnB7Ujir6syvWFBdqi8uTnVCO";
 
@@ -31,7 +39,7 @@ function Userdashboard() {
 // }
 
 // network type [ "rinkeby" | "mumbai" ]
-const type = "rinkeby"
+// const type = "rinkeby"
 // const type2 = "mumbai"
 
 // Put users account adress
@@ -41,17 +49,18 @@ async function Work() {
     let arr=[]
     let name=[]
     let x="";
-    await axios.post(`https://medkept.herokuapp.com/doctor/report`,{"patient":"0xCf7D63056A1363F38B0DE630d70B0F2C9B2CE6ee","doctor":"0x73e989cc5E69c2254327a1bC317255EF9ADc6985"}, {
+    await axios.post(`https://medkept.herokuapp.com/doctor/report`,{"patient":`${text}`,"doctor":"0x73e989cc5E69c2254327a1bC317255EF9ADc6985"}, {
         headers: {
             'Authorization':'Bearer 62324ec714797e008a8409e6'
         }
     }).then((res) => {
         console.log(res.data);
-    //     res.data.records.map((m)=>{
-    //         let z="https://gateway.moralisipfs.com/ipfs/"+m.substring(7);
-    //         arr.push(z);
-    //     })
-    //    setReports(arr);
+        // 0xCf7D63056A1363F38B0DE630d70B0F2C9B2CE6ee
+        res.data.reports.map((m)=>{
+            let z="https://gateway.moralisipfs.com/ipfs/"+m.substring(7);
+            arr.push(z);
+        })
+       setReports(arr);
     })
     // await axios.get(`https://deep-index.moralis.io/api/v2/${accountAdress}/nft/${contractAdress[type2]}?chain=${type2}&format=decimal`, {
     //     headers: {
@@ -80,14 +89,15 @@ async function Work() {
     //         }
     //     });
     // })
-    
+    useEffect(()=>Work(),[])
+
     // arr.push(temp)
     // name.push(temp2)
     // dispatch(setCertificates(arr))
     // dispatch(setNames(name))
 
 }
-useEffect(()=>Work(),[])
+
 // const array = useSelector(selectCertificates);
 // const NameArray= useSelector(selectNames);
 let count=0;
@@ -117,8 +127,8 @@ let count=0;
             <Top src='dashboard_top.png' />
             {/* <AddButton onClick={uploadfiles}><span>+</span></AddButton> */}
             <Certificate>Reports</Certificate>
-            <input id='selectfile'  type="file"  onChange={fileChangedHandler}/>
-            <button onClick={uploadHandler}>Upload</button>
+            <input   type="text"  onChange={fileChangedHandler}/>
+            <button onClick={Work}>Submit</button>
             {/* <BlankPresentation>
             <Blank src='blank.png'/>
             <div>Nothing Present</div>
@@ -126,15 +136,15 @@ let count=0;
                 <Cert>
             {
                 
-                // reports.map((e)=>
-                // {
+                reports.map((e)=>
+                {
                     
-                //     return(
-                //         <>
-                //     <D src={e}/>
-                //     </>
-                //     )}
-                // )
+                    return(
+                        <>
+                    <D src={e}/>
+                    </>
+                    )}
+                )
             }
                     </Cert>
         </Main>
