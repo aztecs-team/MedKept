@@ -1,5 +1,5 @@
 const { Web3Storage, File } = require('web3.storage');
-const { addRecord } = require('./logic/managerLogic');
+const { addRecord } = require('./managerLogic');
 require('dotenv').config();
 
 function uid() {
