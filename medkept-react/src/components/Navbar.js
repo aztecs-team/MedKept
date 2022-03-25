@@ -50,14 +50,14 @@ function Navbar() {
                   className="nav_links"
                   onClick={closeMobileMenu}
                 >
-                  Registration <FontAwesomeIcon className="fa_icon" icon ={faAddressCard}  />
+                  Manager <FontAwesomeIcon className="fa_icon" icon ={faAddressCard}  />
                   {/* Manager */}
                 </Link>
               </ul>
 
               <ul className="nav_item">
                 <Link
-                  to="/reports"
+                  to="/patient"
                   className="nav_links"
                   onClick={closeMobileMenu}
                 >
@@ -68,7 +68,7 @@ function Navbar() {
 
               <ul className="nav_item">
                 <Link
-                  to="/prescription"
+                  to="/doctor"
                   className="nav_links"
                   onClick={closeMobileMenu}
                 >

@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import "./patient.css";
+import Navbar from '../Navbar';
+// import HeroSection from '../HeroSection';
+import Footer from '../Footer';
 // import MenuIcon from '@mui/icons-material/Menu';
 // import IconButton from '@mui/material/IconButton';
 // import CloseIcon from '@mui/icons-material/Close';
@@ -95,6 +98,8 @@ function Userdashboard() {
   return (
     <>
       <Dashboard>
+      <Navbar />
+      
         <Sidebar show={status}>
           <button onClick={() => setStatus(false)}>
             {/* <CloseIcon style={{color:"white"}}/> */}
@@ -126,18 +131,46 @@ function Userdashboard() {
               return (
                 <>
                   <div className="report">
-                    <D className="reports" src={e} />
-                    <D className="reports" src={e} />
-                    <D className="reports" src={e} />
-                    <D className="reports" src={e} />
-                    <D className="reports" src={e} />
-                    <D className="reports" src={e} />
+                    <a 
+                      href={e}
+                      target="blank">                
+                      <D className="reports" src={e} />{" "}
+                    </a>
+
+                    <a 
+                      href={e}
+                      target="blank">                
+                      <D className="reports" src={e} />{" "}
+                    </a>
+
+                    <a 
+                      href={e}
+                      target="blank">                
+                      <D className="reports" src={e} />{" "}
+                    </a>
+
+                    <a 
+                      href={e}
+                      target="blank">                
+                      <D className="reports" src={e} />{" "}
+                    </a>
+
+                    <a 
+                      href={e}
+                      target="blank">                
+                      <D className="reports" src={e} />{" "}
+                    </a>
+
+                    
+                    
+                    
                   </div>
                 </>
               );
             })}
           </Cert>
         </Main>
+        <Footer />
       </Dashboard>
     </>
   );
@@ -168,7 +201,7 @@ const Sidebar = styled.div`
     props.show ? "translateX(0%)" : "translateX(-100%)"};
 `;
 const Main = styled.div`
-  background-color:#444444;
+  background-color: #444444;
 `;
 const AddButton = styled.a`
   position: absolute;
@@ -191,7 +224,7 @@ const AddButton = styled.a`
 `;
 const Certificate = styled.div`
   color: #e5e5e5;
-  
+
   font-style: normal;
   font-weight: 700;
   font-size: 47px;

@@ -9,12 +9,17 @@
     margin-left: 20px;
     background-size: cover;
     box-sizing: border-box;
-    width: 1300px;
+    /* width: 1300px; */
     border-radius: 10px;
-    border: 7px solid #fff;
+    border: 7px solid #D2D3C9;
     box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
+    
 }
 
 .certi{
-    fon
+    font-style: 'Fredoka One', cursive; 
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #D2D3C9;
+    margin-bottom: 350px;
 }

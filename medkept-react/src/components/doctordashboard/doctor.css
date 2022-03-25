@@ -1,0 +1,44 @@
+.submit_space{
+ outline: none;
+  width: 260px;
+  margin-left: 420px;
+  margin-top: 50px;
+  margin-bottom: 150px;
+  padding: 15px;
+  margin-right: 25px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #000000;
+  background-color: #fff;
+  background-color: 1px solid #e6d5b8;
+  cursor: pointer;
+  border-radius: 50px;
+  width:600px;
+  height: 75px;
+  box-shadow: 3px 6px 40px #1B1A17;
+  letter-spacing: 1px;
+}
+
+.submit_button{
+ outline: none;
+  width: 85px;
+  height:50px;
+  
+  
+  font-size: 18px;
+  
+  font-weight: 600;
+  box-shadow: 3px 6px 40px #000;
+  background: linear-gradient(to right bottom,#E0ECE4,#FF4B5C);
+  cursor: pointer;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  background-color: 1px solid #e6d5b8;
+}
+
+.submit_word{
+    color: #E0ECE4;
+    margin-left: 500px;
+    
+    font-size: 30px;
+}

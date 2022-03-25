@@ -6,7 +6,7 @@ import './HeroSection.css';
 function HeroSection() {
   return (
     <div className='hero-container'>
-      <video src='/assets/vid1.mp4' autoPlay loop muted />
+      <video src='/assets/video1.mp4' autoPlay loop muted />
       <h1>MediKept : Making Health Check-up facilities a lot easier!</h1>
       <p>What are you waiting for?</p>
       <div className='hero-btns'>

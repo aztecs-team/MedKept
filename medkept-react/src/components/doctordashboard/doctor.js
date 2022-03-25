@@ -2,6 +2,9 @@ import React, { useState,useEffect } from 'react';
 import styled from 'styled-components';
 import fileToArrayBuffer from 'file-to-array-buffer';
 import { Buffer } from 'buffer';
+import "./doctor.css";
+import Navbar from '../Navbar';
+import Footer from '../Footer';
 // import {Buffer} from 'buffer';
 // import fs from 'fs';
 // import MenuIcon from '@mui/icons-material/Menu';
@@ -119,6 +122,7 @@ let count=0;
   return (
     <>
     <Dashboard>
+    <Navbar />
         <Sidebar show={status}>
         <button onClick={()=>setStatus(false)}>
         {/* <CloseIcon style={{color:"white"}}/> */}
@@ -140,9 +144,12 @@ let count=0;
         </SidebarNav>
             <Top src='dashboard_top.png' />
             {/* <AddButton onClick={uploadfiles}><span>+</span></AddButton> */}
-            <Certificate>Reports</Certificate>
-            <input   type="text"  onChange={fileChangedHandler}/>
-            <button onClick={Work}>Submit</button>
+            <Certificate>Prescription </Certificate>
+            {/* <sup style="color:red;">*</sup> */}
+            <div className='submit_word' >Enter the Patient ID here : </div>
+            <input className='submit_space' required type="text"  onChange={fileChangedHandler}/>
+            
+            <button className='submit_button' onClick={Work}>Submit</button>
             {/* <BlankPresentation>
             <Blank src='blank.png'/>
             <div>Nothing Present</div>
@@ -166,6 +173,7 @@ let count=0;
             }
                     </Cert>
         </Main>
+        <Footer />
         </Dashboard>
     </>
   )
@@ -174,12 +182,14 @@ let count=0;
 export default Userdashboard
 
 const Dashboard = styled.div`
-// display: flex;
-// flex-direction: row;
-background-color:#121212;
-width:100vw;
-height:100vh;
-`
+  // display: flex;
+  // flex-direction: row;
+  background-color: #444444;
+  width: 100vw;
+  height: 100vh;
+  
+`;
+
 const Sidebar = styled.div`
 // display:none;
     position: fixed;
@@ -249,6 +259,7 @@ const BlankPresentation = styled.div`
 `
 const SidebarNav = styled.div`
 position:absolute;
+
 `
 const Profile = styled.div`
     height:150px;

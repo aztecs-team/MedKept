@@ -32,8 +32,8 @@ function Footer() {
               <h2>About Us</h2>
               <Link to='/'>Home</Link>
               <Link to='/registration'>Registration</Link>
-              <Link to='/reports'>Reports</Link>
-              <Link to='/prescription'>Prescription</Link>
+              <Link to='/patient'>Reports</Link>
+              <Link to='/doctor'>Prescription</Link>
               <Link to='/'>Terms of Service</Link>
             </div>
            
